@@ -4,7 +4,7 @@ class Like < ApplicationRecord
 
   # update like counter
   def increase_like_counter
-    self.post.likes_counter += 1
-    self.post.save
+    post.likes_counter += 1
+    post.save
   end
 end

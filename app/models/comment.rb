@@ -4,7 +4,7 @@ class Comment < ApplicationRecord
 
   # update comment counter
   def increase_comment_counter
-    self.post.comments_counter += 1
-    self.post.save
+    post.comments_counter += 1
+    post.save
   end
 end

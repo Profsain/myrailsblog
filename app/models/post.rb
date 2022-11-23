@@ -5,8 +5,8 @@ class Post < ApplicationRecord
 
   # update post counter
   def increase_post_counter
-    self.user.posts_counter += 1
-    self.user.save
+    user.posts_counter += 1
+    user.save
   end
 
   # Return 5 most recent posts
