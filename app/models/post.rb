@@ -2,4 +2,15 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_many :likes
+
+  # update post counter
+  def increase_post_counter
+    self.user.posts_counter += 1
+    self.user.save
+  end
+
+  # Return 5 most recent posts
+  def recent_posts
+    Post.order(created_at: :desc).limit(5)
+  end
 end
