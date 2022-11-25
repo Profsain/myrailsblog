@@ -1,16 +1,90 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# RoR Blog Web Application
+<!-- TABLE OF CONTENTS -->
 
-> Ruby on Rails fully functional blog application that will show users list of blog post and empower readers to interact with each blog post by adding comment and liking post
+# 📗 Table of Contents
 
-## Built With
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-- Major languages : `Ruby`
-- Frameworks : `Rspec & Rails`
-- Technologies used : `Git`, `Gitflows`, `Github`, `Rubocop` and `Rubygem`
+<!-- PROJECT DESCRIPTION -->
 
-## Getting Started
+# 📖 [Ruby on Rails Blog Web App] <a name="about-project"></a>
+
+Ruby on Rails blog web app is a fully functional blog application that will show users list of blog posts and empower readers to interact with each blog post by adding comment and liking post
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li><a href="https://rubyonrails.org/">ERB</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Display list of blog post**
+- **Create new post**
+- **Comment on post**
+- **Like post**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](#)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+>## Getting Started
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -30,12 +104,8 @@ bundle install
 ```
 
 ### Run Server
-- Run the command bellow in your terminal to open mailcatcher server
-- Email confirmation link is display here
-
-```
-mailcatcher
-```
+- Run the command bellow in your terminal
+  rails server
 
 ### Run tests
 you can run one of the following command in your terminal
@@ -52,7 +122,7 @@ rspec spec
 
 👤 **Husseini Mudi Profsain**
 
-- GitHub: [@githubhandle](https://github.com/Profsai)
+- GitHub: [@githubhandle](https://github.com/Profsain)
 - Twitter: [@twitterhandle](https://twitter.com/profsain)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/profsain)
 
@@ -66,10 +136,16 @@ Feel free to check the [issues page](https://github.com/Profsain/myrailsblog/iss
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- To Microvese
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License
 
-This project is [LICENSE]() licensed.
+This project is [MIT]() licensed.
