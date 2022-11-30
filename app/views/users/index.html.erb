@@ -1,2 +1,7 @@
-<h1>Display Users List</h1>
-<p>Work in progress..........</p>
+<div class='container'>
+  <h1>Display Users List</h1>
+  <% @users.each do |user| %>
+    <%= render partial: 'user', locals: { user: user } %>
+  <% end %>
+</div>
+
