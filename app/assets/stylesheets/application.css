@@ -1,13 +1,13 @@
- .postHeader {
+.postHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 18px;
- }
+}
 
- .likesComments {
+.likesComments {
   display: flex;
   justify-content: space-between;
   width: 200px;
- }
+}
