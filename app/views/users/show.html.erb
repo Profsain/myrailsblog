@@ -1,1 +1,26 @@
-<h1>Show single users details</h1>
+<div class='container'>
+  <h1>Show single users details</h1>
+  <%= render partial: 'user', locals: {user: @user}%>
+  <div>
+    <h3>Bio</h3>
+    <p><%= @user.bio%></p>
+  </div>
+  <div>
+    <h3>Post</h3>
+    <div>
+      <% @user.fetch_recent_posts.each do |post| %>
+        <div class='postCard'>
+          <h3><%=link_to post.title, user_post_path(@user.id, post), :class => 'post-title'%></h3>
+          <p><%= post.text %></p>
+          <div class='likesComments'>
+            <p>Comments: <%= post.comments_counter.nil? ? 0 : post.comments_counter %></p>
+            <p>Likes: <%= post.likes_counter.nil? ? 0 : post.likes_counter %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <% unless @user.fetch_recent_posts.empty? %>
+      <button><%=link_to 'See all posts', user_posts_path(@user), :class => 'see-all-btn'%></button>
+    <% end %>
+  </div>
+</div>
