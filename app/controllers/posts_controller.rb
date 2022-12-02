@@ -2,14 +2,10 @@
 
 class PostsController < ApplicationController
   before_action :fetch_user, only: %i[index show]
-
+  
   def index
     @user = User.find(params[:user_id])
     @posts = @user ? @user.posts : Post.all
-  end
-
-  def show
-    @post = @user ? @user.posts.find(params[:id]) : Post.find(params[:id])
   end
 
   def new
@@ -29,6 +25,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @post = @user ? @user.posts.find(params[:id]) : Post.find(params[:id])
+  end
+
   private
 
   def fetch_user
@@ -38,6 +38,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:user_id, :title, :text)
   end
 end
