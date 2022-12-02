@@ -7,6 +7,8 @@
   </div>
   <div>
     <h3>Post</h3>
+    <%= link_to 'Create New Post', new_post_path %>
+    <hr>
     <div>
       <% @user.fetch_recent_posts.each do |post| %>
         <div class='postCard'>
