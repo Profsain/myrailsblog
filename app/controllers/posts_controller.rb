@@ -19,6 +19,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post was successfully created.'
       redirect_to user_posts_path(@user)
     else
+      flash[:alert] = 'Post was not created.'
       redirect_to new_post_path
     end
   end
