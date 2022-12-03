@@ -4,6 +4,6 @@
   </div>
   <div class='col-md-8'>
     <h3><%= link_to user.name, user %></h3>
-    <p>Number of posts: </p>
+    <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
   </div>
 </div>

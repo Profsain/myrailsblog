@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
-  belongs_to :author, class_name: 'User'
+  belongs_to :user, class_name: 'User'
   has_many :comments
   has_many :likes
+  after_save :posts_counter
 
   # validation
   validates :title, presence: true, length: { maximum: 250 }
@@ -10,9 +11,7 @@ class Post < ApplicationRecord
 
   # update post counter
   def posts_counter
-    # user.increment!(:posts_counter)
-    user.posts_counter += 1
-    user.save
+    user.increment!(:posts_counter)
   end
 
   # Return 5 most recent posts
