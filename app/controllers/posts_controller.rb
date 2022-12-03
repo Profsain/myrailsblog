@@ -14,6 +14,8 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @user = current_user
     @post.user = @user
+    @post.likes_counter = 0
+    @post.comments_counter = 0
 
     if @post.save
       flash[:notice] = 'Post was successfully created.'

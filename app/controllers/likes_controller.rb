@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     @like.user = current_user
 
     @like.save if @like.valid?
-    redirect_to post_path @like.post
+    redirect_to posts_path @like.post
   end
 
   private

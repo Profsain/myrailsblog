@@ -10,7 +10,7 @@
     <p><%= @post.text %></p>
   </div>
   <div>
-  <%= render partial: 'likes/form', locals: {post_id: @post.id}%>
+  <%= render partial: 'likes/form', locals: {post_id: @post.id} %>
   </div>
   <div class='commentsList'>
     <% @post.comments.each do |comment| %>
