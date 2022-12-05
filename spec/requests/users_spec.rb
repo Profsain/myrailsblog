@@ -1,37 +1,21 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe 'Users request', type: :request do
+RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    it 'returns http success' do
-      get '/users/index'
-      expect(response).to have_http_status(:success)
-    end
+    before(:example) { get users_path }
 
-    it 'renders the index template' do
-      get '/users'
-      expect(response).to render_template('index')
-    end
-
-    it 'contains the correct heading' do
-      get '/users'
-      expect(response.body).to include('Display Users List')
+    it 'is a success' do
+      expect(response).to have_http_status(:ok)
     end
   end
 
-  describe 'GET /show' do
-    it 'returns http success' do
-      get '/users/show'
-      expect(response).to have_http_status(:success)
-    end
+  describe 'GET /:id' do
+    before(:example) { get '/users/' }
 
-    it 'renders the show template' do
-      get '/users/show'
-      expect(response).to render_template('show')
-    end
-
-    it 'contains the correct heading' do
-      get '/users/show'
-      expect(response.body).to include('Show single users details')
+    it 'is a success' do
+      expect(response).to have_http_status(:ok)
     end
   end
 end
