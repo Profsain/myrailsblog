@@ -118,13 +118,19 @@ rspec spec
 > Rubocop --color
 > Rubocop -A
 ```
-## Author
+## Authors
 
 👤 **Husseini Mudi Profsain**
 
 - GitHub: [@githubhandle](https://github.com/Profsain)
 - Twitter: [@twitterhandle](https://twitter.com/profsain)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/profsain)
+
+👤 **Yunus Ali**
+
+- GitHub: [@githubhandle](https://github.com/IamYunusAli)
+- Twitter: [@twitterhandle](https://twitter.com/IamYunusAli)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/IamYunusAli)
 
 ## 🤝 Contributing
 
