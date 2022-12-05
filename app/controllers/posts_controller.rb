@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-  before_action :fetch_user, only: %i[index show]
+ before_action :fetch_user, only: [:index, :show]
 
   def index
     @user = User.find(params[:user_id])
-    @posts = @user ? @user.posts : Post.all
+    @posts = @user ? @user.posts : Post.all.includes(:comments)
   end
 
   def new
