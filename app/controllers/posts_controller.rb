@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
- before_action :fetch_user, only: [:index, :show]
+  before_action :fetch_user, only: %i[index show]
 
   def index
     @user = User.find(params[:user_id])
