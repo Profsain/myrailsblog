@@ -4,18 +4,28 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    # user can delete posts if they are the author
-    can :destroy, Post, user_id: user.id
+    user ||= User.new
+    if user.role == 'admin' # user is an admin
+      can :manage, :all
+    else 
+      can :read, :all
+      can :manage, Post, user_id: user.id
+      can :manage, Comment, user_id: user.id
+    end
+    
+    # # user can delete posts if they are the author
+    # can :manage, Post, user_id: user.id
+    
 
-    # user can delete post if they are an admin
-    can :destroy, Post, user_id: user.id if user.admin?
+    # # user can delete post if they are an admin
+    # # can :manage, Post, user_id: user.id if user.admin?
 
-    # user can delete comments if they are the author
-    can :destroy, Comment, user_id: user.id
+    # # user can delete comments if they are the author
+    # can :manage, Comment, user_id: user.id
 
     # user can delete comments if they are an admin
-    can :destroy, Comment, user_id: user.id if user.admin?
-    
+    # can :manage, Comment, user_id: user.id if user.admin?
+
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

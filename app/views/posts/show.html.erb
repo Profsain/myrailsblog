@@ -8,6 +8,9 @@
       </div>
     </div>
     <p><%= @post.text %></p>
+    <% if can? :destroy, @post%>
+      <%= button_to "Delete", user_post_path(@post.id), method: :delete %>
+    <% end %>
   </div>
   <div>
   <%= render partial: 'likes/form', locals: {post_id: @post.id} %>
