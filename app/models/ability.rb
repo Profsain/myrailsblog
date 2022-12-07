@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -7,15 +5,14 @@ class Ability
     user ||= User.new
     if user.role == 'admin' # user is an admin
       can :manage, :all
-    else 
+    else
       can :read, :all
       can :manage, Post, user_id: user.id
       can :manage, Comment, user_id: user.id
     end
-    
+
     # # user can delete posts if they are the author
     # can :manage, Post, user_id: user.id
-    
 
     # # user can delete post if they are an admin
     # # can :manage, Post, user_id: user.id if user.admin?
