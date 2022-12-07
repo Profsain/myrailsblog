@@ -1,4 +1,4 @@
-<div class='container'>  
+<div class='container'>
   <div class='postCard'>
     <div class='postHeader'>
       <h3>"<%= @post.title %>" by: <%= User.find(@post.user_id).name %></h3>
@@ -18,7 +18,12 @@
   <div class='commentsList'>
     <% @post.comments.each do |comment| %>
       <p><%= User.find(comment.user_id).name %>: <%= comment.text %></p>
+      <% if can? :destroy, comment %>
+        <%= button_to "Delete", user_post_comment_path(post_id: params[:id], id: comment.id
+), method: :delete %>
+      <% end %>
     <% end %>
+
   </div>
   <div>
     <%= render partial: 'comments/form', locals: { post: @post } %>
