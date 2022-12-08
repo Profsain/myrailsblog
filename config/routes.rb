@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     post :auth, to: "authentication#create"
     resources :users, only: [:index] do
       resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
       end
     end
   end
