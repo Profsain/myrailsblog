@@ -9,6 +9,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # devise for authentication
 gem 'devise'
 
+gem 'jwt'
+
 # access control for rails
 gem 'cancancan'
 
