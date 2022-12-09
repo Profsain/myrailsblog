@@ -12,14 +12,14 @@ development:
   database: myrailsblog_development
   host: localhost
   username: postgres
-  password: '24434'
+  password: umiwoabi
 
 test:
   <<: *default
   database: myrailsblog_test
   host: localhost
   username: postgres
-  password: '24434'
+  password: umiwoabi
 
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
@@ -28,4 +28,4 @@ production:
   <<: *default
   database: myrailsblog_production
   username: myrailsblog
-  password: <%= ENV["MYRAILSBLOG_DATABASE_PASSWORD"] %>
+  password: umiwoabi

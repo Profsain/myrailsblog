@@ -11,6 +11,9 @@ gem 'devise'
 
 gem 'jwt'
 
+gem 'rswag-api'
+gem 'rswag-ui'
+
 # access control for rails
 gem 'cancancan'
 
@@ -66,6 +69,7 @@ group :development, :test do
   # rspec for testing
   gem 'ffi'
   gem 'rspec-rails'
+  gem 'rswag-specs'
 end
 
 group :development do
