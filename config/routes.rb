@@ -11,5 +11,14 @@ Rails.application.routes.draw do
   resources :comments, only: [:new, :create]
   resources :likes, only: [:create]
 
+  namespace :api do
+    post :auth, to: "authentication#create"
+    resources :users, only: [:index] do
+      resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
+      end
+    end
+  end
+
   root 'users#index'
 end
