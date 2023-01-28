@@ -37,8 +37,6 @@ Ruby on Rails blog web app is a fully functional blog application that will show
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a></li>
-    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
     <li><a href="https://rubyonrails.org/">ERB</a></li>
   </ul>
 </details>
@@ -95,7 +93,7 @@ To get a local copy up and running follow these simple example steps.
 - Have `visual-studio code` or any other code editor installed on your computer.
 
 ### Setup
-- In order to get a copy of this project you need to download it from https://github.com/Profsain/myrailblog
+- In order to get a copy of this project you need to download it from https://github.com/Profsain/rorblog
 - Extract the zipped file and open it in your code editor
 ### Install
 - Run the command bellow in your terminal to get all required files
@@ -136,7 +134,7 @@ rspec spec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Profsain/myrailsblog/issues/).
+Feel free to check the [issues page](https://github.com/Profsain/rorblog/issues/).
 
 ## Show your support
 
