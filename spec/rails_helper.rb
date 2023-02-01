@@ -31,11 +31,7 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-<<<<<<< HEAD
   config.fixture_path = "#{Rails.root}/spec/fixtures"
-=======
-  config.fixture_path = "#{:Rails.root}/spec/fixtures"
->>>>>>> 6a4cb023935fecb3f2dbc86887775923aec29798
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
