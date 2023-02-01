@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   before_action :fetch_user, only: %i[index show]
 
   def index
@@ -11,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = @current_user.posts.new(post_params)
     @user = current_user
     @post.user = @user
     @post.likes_counter = 0
@@ -28,6 +29,16 @@ class PostsController < ApplicationController
 
   def show
     @post = @user ? @user.posts.find(params[:id]) : Post.find(params[:id])
+  end
+
+  # delete post
+  def destroy
+    @post = Post.find(params[:id])
+    @user = @post.user
+    @post.destroy ? flash[:notice] = 'Post was successfully deleted.' : flash[:alert] = error
+
+    @user.posts_counter -= 1
+    redirect_to user_posts_path(@user) if @user.save
   end
 
   private
