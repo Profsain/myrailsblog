@@ -3,11 +3,13 @@ RSpec.describe 'Posts/show', type: :system do
   before do
     driven_by(:rack_test)
   end
+
   describe 'Show' do
     before(:all) do
       @user = User.first
       @posts = @user.posts
     end
+
     it 'shows the title, text, number of commment, number of likes and post author' do
       visit user_posts_path(@user)
       @posts.each do |post|
