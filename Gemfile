@@ -6,14 +6,6 @@ ruby '3.1.2'
 # rubocop for code style
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-# devise for authentication
-gem 'devise'
-
-gem 'jwt'
-
-# access control for rails
-gem 'cancancan'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 

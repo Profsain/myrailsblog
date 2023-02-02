@@ -1,7 +1,8 @@
 class User < ApplicationRecord
-  after_initialize :set_defaults
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # Callbacks
+  before_save :set_defaults
+
+  # Associations
   has_many :posts
   has_many :comments
   has_many :likes
