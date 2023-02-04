@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
   before_action :fetch_user, only: %i[index show]
 
   def index
