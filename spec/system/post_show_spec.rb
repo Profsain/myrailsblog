@@ -19,7 +19,6 @@ RSpec.describe 'Posts/show', type: :system do
         expect(page).to have_text(post.comments_counter)
         expect(page).to have_text(post.likes_counter)
         expect(page).to have_text(post.user.name)
-        
       end
     end
   end
